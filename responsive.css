@@ -169,17 +169,22 @@
 
     /* Icones */
 
+    .sobre-tecnologias {
+        width: 100%;
+    }
+    
     .tecnologias {
-        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .tecnologias-lista {
-        display: flex;
         gap: 2rem;
     }
 
     .tecnologias-lista i {
-        width: 50px;
+        width: 30px;
     }
 
     /* ======= Projetos ======= */
