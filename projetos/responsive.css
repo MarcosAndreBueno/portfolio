@@ -1,0 +1,76 @@
+@media screen and (width < 900px) {
+
+    /* Carrossel */
+    .carrossel-gifs {
+        width: 60rem;
+        height: 37.5rem;
+    }
+
+    .voltar,
+    .ir {
+        transform: translateY(350%);
+    }
+
+    .carrossel-navegacao-barra {
+        transform: scale(1);
+        margin-right: 0px;
+    }
+}
+
+@media screen and (width < 700px) {
+
+    /* Header */
+    .logo-rodape {
+        display: none;
+    }
+
+    /* Carrossel */
+    .carrossel-gifs {
+        width: 40rem;
+        height: 25rem;
+    }
+
+    .voltar,
+    .ir {
+        transform: translateY(275%);
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    /* Rodape */
+    .rodape {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (width < 500px) {
+
+    /* Header */
+    .menu {
+        padding-bottom: 1rem;
+    }
+
+    .header {
+        display: block;
+        text-align: center;
+    }
+
+    /* Carrossel */
+
+    .carrossel-gifs {
+        width: 30rem;
+        height: 18.75rem;
+    }
+
+    .carrossel-botao {
+        top: -20px;
+    }
+
+    .voltar,
+    .ir {
+        transform: translateY(285%);
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
