@@ -43,6 +43,11 @@
     content: url('https://api.iconify.design/logos/typescript-icon-round.svg');
 }
 
+.fy-bootstrap {
+    background: url('https://api.iconify.design/devicon/bootstrap.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/devicon/bootstrap.svg');
+}
+
 .fy-angular {
     background: url('https://api.iconify.design/logos/angular-icon.svg') no-repeat center center / contain;
     content: url('https://api.iconify.design/logos/angular-icon.svg');
