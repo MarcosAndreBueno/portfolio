@@ -239,9 +239,15 @@
         font-size: 15px;
     }
 
+    .contato-email,
+    .contato-whatsapp {
+        margin-bottom: 5rem;
+        margin-right: 1rem;
+    }
+
     h1.contato-item {
         margin: 0;
-        padding-inline: 2rem;
+        margin-bottom: 5rem;
         font-size: 150%
     }
 
