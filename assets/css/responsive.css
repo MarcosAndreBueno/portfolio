@@ -172,7 +172,7 @@
     .sobre-tecnologias {
         width: 100%;
     }
-    
+
     .tecnologias {
         justify-content: center;
         align-items: center;
@@ -207,6 +207,47 @@
 }
 
 @media screen and (width < 500px) {
+
+    /* ========== Tags ========== */
+
+    h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    /* ========== Início ========== */
+
+    .logo img {
+        width: 14rem;
+    }
+
+    /* ========== Apresentação ========== */
+
+    .cabecalho {
+        display: flex;
+        justify-content: center;
+    }
+
+    p.apresentacao-texto {
+        font-size: 1.5rem;
+    }
+
+    .midia-social a {
+        height: 2.75rem;
+        width: 2.75rem;
+        font-size: 1.75rem;
+        border-radius: 50%;
+        border: 0.1rem solid;
+    }
+
+    .curriculo a {
+        font-size: 1.25rem;
+        padding-inline: 0;
+    }
+
     /* ======= Sobre ======= */
 
     .carta-apresentacao a {
@@ -217,7 +258,16 @@
         display: none;
     }
 
+    .sobre-conteudo .cabecalho {
+        font-size: 3rem;    
+    }
+
+    .sobre-tecnologias .cabecalho{
+        font-size: 3rem;
+    }
+
     .sobre-texto {
+        font-size: 1.5rem;
         width: 70vw;
         display: grid;
     }
@@ -230,7 +280,7 @@
     /* Icones */
 
     .tecnologias-lista i {
-        width: 35px;
+        width: 20px;
     }
 
     /* ======= Contato ======= */
@@ -253,5 +303,55 @@
 
     .contato-item a {
         font-size: 2rem;
+    }
+
+    /* ========== Projetos ========== */
+
+    .projetos .cabecalho {
+        font-size: 3rem;
+    }
+
+    /* ========== Contato ========== */
+
+    .contato-cabecalho .cabecalho {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (width < 320px) {
+
+    /* ======= Sobre ======= */
+    .sobre-conteudo .cabecalho {
+        font-size: 2.25rem;
+    }
+
+    .sobre-tecnologias .cabecalho{
+        font-size: 2.25rem;
+    }
+
+    /* ======= Contato ======= */
+
+    .contato-lista i {
+        font-size: 10px;
+    }
+
+    h1.contato-item {
+        font-size: 10%
+    }
+
+    .contato-item a {
+        font-size: 1.5rem;
+    }
+
+    /* ========== Projetos ========== */
+
+    .projetos .cabecalho {
+        font-size: 2.25rem;
+    }
+
+    /* ========== Contato ========== */
+
+    .contato-cabecalho .cabecalho {
+        font-size: 2.25rem;
     }
 }

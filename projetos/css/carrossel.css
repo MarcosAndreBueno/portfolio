@@ -75,12 +75,26 @@ body {
 
 .carrossel-slide {
     position: relative;
+    display: flex;
+    align-items: center;
     flex: 0 0 100%;
     width: 100%;
     background-color: black;
     outline: none;
 
     counter-increment: item; /* del */
+}
+
+.teste {
+
+}
+
+.voltar {
+
+}
+
+.ir {
+    grid-row-start: 1;
 }
 
 .carrossel-slide:nth-child(even) {
@@ -237,8 +251,7 @@ input[type="radio"] {
 
 .voltar,
 .ir {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     width: 4.5rem;
     height: 4.5rem;
     background-color: #333;
@@ -246,19 +259,10 @@ input[type="radio"] {
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
-    transform: translateY(525%);
 }
 
 .carrossel-botao {
     font-size: 0;
-    display: flex;
-    justify-content: space-between;
-/*     
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: left;
-*/
 }
 
 .voltar {
@@ -274,7 +278,7 @@ input[type="radio"] {
 
 /* ============ Animação ============ */
 /* div base para os botões prev e next, mesmo tamanho e posição que div pai */
-.carrossel-animacao {
+.carrossel-canva {
     position: absolute;
     top: 0;
     left: 0;
@@ -287,7 +291,7 @@ input[type="radio"] {
 @media (hover: hover) {
 
     /* del */
-    .carrossel-canva {
+    .carrossel-animacao {
         animation-name: tonext, snap;
         animation-timing-function: ease;
         animation-duration: 4s;
