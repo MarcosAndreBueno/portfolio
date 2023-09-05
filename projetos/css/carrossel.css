@@ -5,9 +5,6 @@
 
 * {
     box-sizing: border-box;
-    /* thumb and track color */
-    /*     scrollbar-color: transparent transparent;
-    scrollbar-width: 0px; */
 }
 
 
@@ -24,16 +21,6 @@ li {
 
 /* ============ Tamanho e alinhamento ============ */
 
-/* 
-centralização do carrousel
-body {
-    max-width: 37.5rem;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    font-family: 'Lato', sans-serif;
-} 
-*/
-
 .carrossel {
     display: flex;
     justify-content: center;
@@ -47,12 +34,6 @@ body {
     height: 50rem;
     height: 55rem;
     filter: drop-shadow(0 0 10px #0003);
-
-/* 
-    filter: drop-shadow(0 0 10px #0003);
-    padding-top: 75%;
-    perspective: 100px;
- */    
 }
 
 .carrossel-gifs-lista {
@@ -70,7 +51,7 @@ body {
     scroll-snap-type: x mandatory;
     /* fixa rolagem com a posição inicial de cada gif */
 
-    counter-reset: item; /* del */
+    counter-reset: item;
 }
 
 .carrossel-slide {
@@ -82,15 +63,7 @@ body {
     background-color: black;
     outline: none;
 
-    counter-increment: item; /* del */
-}
-
-.teste {
-
-}
-
-.voltar {
-
+    counter-increment: item;
 }
 
 .ir {
@@ -109,7 +82,7 @@ body {
     color: #fff;
     font-size: 2em;
 
-    /* content: counter(item); */
+    content: "Carregando imagem " counter(item);
 }
 
 /* slide-gif */
@@ -127,22 +100,6 @@ body {
 *::-webkit-scrollbar {
     width: 0;
 }
-
-*::-webkit-scrollbar-track {
-    /* background: transparent; */
-}
-
-*::-webkit-scrollbar-thumb {
-    /* background: transparent; */
-    /* border: none; */
-}
-
-/* 
-Mudar barra de rolagem padrão do Edge
-* {
-    -ms-overflow-style: none;
-}
-*/
 
 
 /* ============ Navegação inferior ============ */
@@ -170,63 +127,7 @@ Mudar barra de rolagem padrão do Edge
     border: 0.25rem solid transparent;
     border-radius: 50%;
     font-size: 0;
-    /* transition: transform 0.1s; */
 }
-
-
-/* ============ Botões anterior e próximo ============ */
-/* 
-.carrossel-gifs::before,
-.carrossel-gifs::after,
-.carrossel-anterior,
-.carrossel-proximo {
-    //Tamanho e posição das setas next e previous
-    position: absolute;
-    top: 0;
-    margin-top: 37.5%;
-    width: 4rem; //substituido
-    height: 4rem; //substituido
-    width: 0rem;
-    height: 0rem;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    font-size: 0;
-    outline: 0;
-}
-
-.carrossel-gifs::before,
-.carrossel-anterior {
-    left: -1rem;
-}
-
-.carrossel-gifs::after,
-.carrossel-proximo {
-    right: -1rem;
-}
-
-.carrossel-gifs::before,
-.carrossel-gifs::after {
-    content: '';
-    z-index: 1;
-    background-color: #333;
-    background-size: 1.5rem 1.5rem;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #fff;
-    font-size: 2.5rem; //cancelado
-    line-height: 4rem; //cancelado
-    text-align: center; //canceleado
-    pointer-events: none; //botão clicável
-}
-
-.carrossel-gifs::before {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.carrossel-gifs::after {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-*/
 
 input[type="radio"] {
     position: absolute;
@@ -315,7 +216,6 @@ input[type="radio"] {
 
 .carrossel-gifs:hover .carrossel-animacao,
 .carrossel-gifs:focus-within .carrossel-animacao {
-    /* del */
     animation-name: none;
 }
 

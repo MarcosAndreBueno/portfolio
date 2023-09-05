@@ -75,7 +75,6 @@ h2 {
 }
 
 .botao {
-    /* border: 2px solid var(--texto-corpo-cor); */
     text-align: center;
     width: 40%;
     padding: max(6px, 1%);
@@ -85,7 +84,6 @@ h2 {
     box-shadow: 0 0 1rem var(--cor-hover);
     transition: 0.5s ease-in-out;
     cursor: pointer;
-    /* z-index: -5; */
 }
 
 
@@ -93,7 +91,6 @@ h2 {
 
 .inicio {
     color: var(--texto-inicial-cor);
-    /* !!! */
     font-family: 'Rubik Iso';
 }
 
@@ -141,7 +138,6 @@ h2 {
 }
 
 .apresentacao-conteudo {
-    /* !!! */
     align-items: center;
     justify-content: space-between;
 }
@@ -176,14 +172,6 @@ p.apresentacao-texto {
 .foto-principal img {
     width: 100%;
     border-radius: 10%;
-    /* 
-    animation-name: animacao;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    box-shadow: -84px 87px 27px -71px rgba(24, 27, 36, 255), 80px 87px 28px -71px rgba(24, 27, 36, 255);
- */
 }
 
 /* Apresentação Foto Animação */
@@ -204,7 +192,6 @@ p.apresentacao-texto {
     margin: max(3%, 40px) 0;
     display: inline-flex;
     gap: 20px;
-    /*     align-content: end; */
 }
 
 .midia-social a {
@@ -215,7 +202,6 @@ p.apresentacao-texto {
     height: 4rem;
     width: 4rem;
     font-size: 2rem;
-    /* background: transparent; */
     border-radius: 50%;
     border: 0.2rem solid;
     transition: 0.5s ease;
@@ -226,7 +212,6 @@ p.apresentacao-texto {
 .midia-social a:hover {
     background-color: var(--cor-hover);
     color: #fefefe;
-    /* box-shadow: 0 0 0.5rem var(--cor-hover); */
 }
 
 /* Apresentação Currículo */
@@ -266,7 +251,6 @@ p.apresentacao-texto {
 
 h2.cargo {
     margin: max(10px, 2%) 0;
-    /* !!! */
     color: var(--palavra-cor);
     font-size: 3.5rem;
 }
@@ -365,7 +349,6 @@ div.previa {
     position: absolute;
     bottom: 0;
     gap: 10px;
-    /* left: 0; */
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--cor-hover));
     display: flex;
     flex-direction: column;

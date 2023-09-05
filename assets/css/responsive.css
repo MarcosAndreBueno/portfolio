@@ -105,7 +105,6 @@
 
     .nav-bar-itens {
         display: none;
-        /* !!! */
     }
 
     .nav-bar {
@@ -127,15 +126,11 @@
         flex-direction: column !important;
         text-align: center;
         gap: 50px;
-        /* justify-content: center !important;
-        align-items: center !important; */
     }
 
     .apresentacao-cabecalho {
         width: 85%;
         display: block;
-        /* flex-direction: column; */
-        /* align-items: center; */
     }
 
     .midia-social {

@@ -1,7 +1,6 @@
 /* ============ Global ============ */
 * {
     margin: 0px;
-    /* padding-inline 15px */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
@@ -65,13 +64,11 @@ a:visited {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    /* margin-top: max(3%, 32px); */
 }
 
 .container {
     max-width: 1240px;
     margin-inline: auto;
-    /* padding-inline: 15px; */
 }
 
 .flex {
