@@ -384,7 +384,7 @@ div.previa {
 
 .contato {
     overflow: hidden;
-    background-image: url('./imagens/imagem-fundo.png');
+    background-image: url('../imagens/imagem-fundo.png');
     background-size: cover;
     background-position: center;
     padding-top: 1rem;
