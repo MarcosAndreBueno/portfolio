@@ -1,0 +1,75 @@
+/* Início Barra de navegação */
+.nav-bar {
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar-itens {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.nav-bar-itens a {
+    font-size: 2rem;
+}
+
+.active {
+    color: var(--cor-hover);
+}
+
+#Menu-card {
+    display: None;
+}
+
+/* Hover */
+.nav-bar-itens a:hover {
+    transform-origin: left;
+    transition: 0.5s ease-in-out;
+    color: var(--cor-hover);
+}
+
+/* Drop down */
+.menu-contato {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-link {
+  cursor: pointer;
+}
+
+.dropdown-contato {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #323946;
+  min-width: 220px;
+  border-radius: 8px;
+  padding: 10px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.3s ease;
+}
+
+.dropdown-contato a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-contato a:hover {
+  background: #3f4758;
+}
+
+.menu-contato:hover .dropdown-contato {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+

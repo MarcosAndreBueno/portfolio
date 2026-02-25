@@ -86,6 +86,10 @@ h2 {
     cursor: pointer;
 }
 
+.cabecalho {
+    text-align: center;
+}
+
 
 /* ========== Inicio ========== */
 
@@ -98,37 +102,6 @@ h2 {
     width: 17rem;
 }
 
-/* Início Barra de navegação */
-
-.nav-bar {
-    margin-top: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-bar-itens {
-    display: inline-flex;
-    gap: 20px;
-}
-
-.nav-bar-itens a {
-    font-size: 2rem;
-}
-
-.active {
-    color: var(--cor-hover);
-}
-
-#Menu-card {
-    display: None;
-}
-
-/* Hover */
-.nav-bar-itens a:hover {
-    transform-origin: left;
-    transition: 0.5s ease-in-out;
-    color: var(--cor-hover);
-}
 
 /* ========== Apresentação ========== */
 
@@ -166,12 +139,12 @@ p.apresentacao-texto {
 /* Apresentação Foto */
 
 .foto-principal {
-    width: 35%;
+    width: 47%;
+    text-align: center;
 }
 
 .foto-principal img {
     width: 100%;
-    border-radius: 10%;
 }
 
 /* Apresentação Foto Animação */
@@ -217,6 +190,7 @@ p.apresentacao-texto {
 /* Apresentação Currículo */
 
 .curriculo {
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -256,7 +230,7 @@ h2.cargo {
 }
 
 .sobre-conteudo {
-    width: 45%;
+    width: 50%;
 }
 
 .sobre-conteudo .cabecalho {
@@ -280,29 +254,35 @@ span.palavra {
     padding: 3%;
 }
 
-/* Icones */
+/* Tecnologias */
 
 .sobre-tecnologias {
-    width: 45%;
+    width: 100%;
 }
 
-.tecnologias-lista {
+#nuvem-stacks {
+    width: 100%;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.tecnologias {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     list-style: none;
-    padding-bottom: 5rem;    
+    padding-bottom: 5rem;
 }
 
-.tecnologias-lista li {
+.tecnologias img {
     width: 100%;
     padding-bottom: 3rem;
     margin: 0;
-}
-
-.tecnologias-lista i {
-    width: 3.5rem;
+    width: 100%;
 }
 
 
@@ -396,7 +376,7 @@ div.previa {
     height: 100%;
     z-index: -1;
 }
-    
+
 .contato-cabecalho {
     margin-top: max(3%, 35px);
 }

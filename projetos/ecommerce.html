@@ -30,24 +30,22 @@
 
         <!-- Título e Descrição -->
         <div class="">
-            <h1 class="titulo">Financial</h1>
+            <h1 class="titulo">Ecommerce</h1>
             <p class="descricao">
-                Aplicativo full stack de controle financeiro. No front-end, foram utilizados Angular e Bootstrap,
-                além de HTML 5, CSS 3, e TypeScript. No back-end, foram usados Spring Boot 3 e JPA/Hibernate. O
-                aplicativo permite realizar operações de entrada e saída de fluxo, separado por elementos como conta,
-                tipo, categoria, data e valor. Existe uma série de recursos desenvolvidos para auxiliar o uso do app,
-                como permitir criar, editar e excluir cada um dos elementos presentes numa nova transação, CRUD no banco
-                de dados através do consumo de API's, além de separar os fluxos de entrada e saída por mês e ano com o
-                auxílio de formulários reativos do Angular.
+                Aplicativo Java e Angular em arquitetura de microsserviços. Construindo utilizando os seguintes
+                componentes: Mensageria utilizando Kafka, Observabilidade com Loki, Prometheus e Grafana, Tracing com
+                Micrometer, SQL e NoSQL com PostgreSQL e MongoDB, Containerização com Docker. Utilizada padrões
+                arquiteturais de Discovery Pattern com Eureka e Centralized Configuration com Spring Cloud Config. Além
+                disso foi utilizado Keycloak para segurança e Restful com padrão MVC para construção das API's.
+                <br>
+                Obs: algumas partes ainda estão em desenvolvimento.
         </div>
 
 
         <!-- Carrousel Gifs -->
         <section class="carrossel" aria-label="Gallery">
             <shadow-carrossel animacao="false" images="
-                https://github.com/MarcosAndreBueno/financial/blob/readme/images/ovv1.gif?raw=true,
-                https://github.com/MarcosAndreBueno/financial/blob/readme/images/ovv2.gif?raw=true,
-                https://github.com/MarcosAndreBueno/financial/blob/readme/images/ovv3.gif?raw=true
+                
                 "></shadow-carrossel>
         </section>
 
@@ -56,7 +54,7 @@
         <div>
             <p class="descricao">
                 Para visualizar o código e saber como executar o aplicativo, por favor entre em:
-                <a href="https://github.com/MarcosAndreBueno/financial" target="_blank">Github/Financial</a>
+                <a href="https://github.com/MarcosAndreBueno/ecommerce-project" target="_blank">Github/Ecommerce</a>
             </p>
         </div>
         <div class="tecnologias">
@@ -75,12 +73,17 @@
             <ul class="tecnologias-lista">
                 <li> <i class="fy-git"></i> </li>
                 <li> <i class="fy-postgre"></i> </li>
+                <li> <i class="fy-mongodb"></i> </li>
+            </ul>
+            <ul class="tecnologias-lista">
+                <li> <i class="fy-prometheus"></i> </li>
+                <li> <i class="fy-grafana"></i> </li>
             </ul>
         </div>
 
 
         <!-- Rodapé -->
-        <shadow-rodape paginaAtiva="Financial"></shadow-rodape>
+        <shadow-rodape paginaAtiva="Ecommerce"></shadow-rodape>
     </div>
 </body>
 

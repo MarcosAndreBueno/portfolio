@@ -73,3 +73,33 @@
     background: url('https://api.iconify.design/logos/postgresql.svg') no-repeat center center / contain;
     content: url('https://api.iconify.design/logos/postgresql.svg');
 }
+
+.fy-mongodb {
+    background: url('https://api.iconify.design/logos/mongodb.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/mongodb.svg');
+}
+
+.fy-kafka {
+    background: url('https://api.iconify.design/logos/apache-kafka.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/apache-kafka.svg');
+}
+
+.fy-eureka {
+    background: url('https://api.iconify.design/logos/spring-eureka.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/spring-eureka.svg');
+}
+
+.fy-prometheus {
+    background: url('https://api.iconify.design/logos/prometheus.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/prometheus.svg');
+}
+
+.fy-grafana {
+    background: url('https://api.iconify.design/logos/grafana.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/grafana.svg');
+}
+
+.fy-keycloak {
+    background: url('https://api.iconify.design/logos/keycloak.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/logos/keycloak.svg');
+}

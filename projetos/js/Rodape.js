@@ -10,13 +10,33 @@ class Rodape extends HTMLElement {
         //style
         const style = document.createElement("style");
         style.textContent = this.styles();
-        this.shadowRoot.appendChild(style)
+        this.shadowRoot.appendChild(style);
 
         //icones
         const link = document.createElement("link");
         link.rel = "stylesheet";
         link.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";
-        this.shadowRoot.appendChild(link)
+        this.shadowRoot.appendChild(link);
+    }
+
+    initPaginasPortfolio() {
+        var paginasPortfolio = [
+            ["./automatic-melody-harmonizer.html", "Automatic Melody Harmonizer"],
+            ["./dsmeta.html", "DSMeta"],
+            ["./ecommerce.html", "Ecommerce"],
+            ["./financial.html", "Financial"],
+            ["./java-game.html", "Java Game"],
+            ["./springboot3.html", "Spring Boot 3"],
+        ];
+        const paginaAtiva = this.getAttribute("paginaAtiva");
+
+        for (let i = 0; i < paginasPortfolio.length; i++) {
+            if (paginaAtiva.toLocaleLowerCase() == paginasPortfolio[i][1].toLocaleLowerCase()) {
+                paginasPortfolio.splice(i, 1);
+                break;
+            }
+        }
+        return paginasPortfolio;
     }
 
     build() {
@@ -28,7 +48,8 @@ class Rodape extends HTMLElement {
         conteudoHTML += this.build_logo();
 
         //projetos
-        conteudoHTML += this.build_projetos();
+        var paginasPortfolio = this.initPaginasPortfolio();
+        conteudoHTML += this.build_projetos(paginasPortfolio);
 
         //coluna contato
         conteudoHTML += this.build_contato();
@@ -49,24 +70,24 @@ class Rodape extends HTMLElement {
         `
     }
 
-    build_projetos() {
+    build_projetos(paginasPortfolio) {
         return `
         <div class="coluna">
             <h1 class="topicos">Outros Projetos</h1>
             <div class="">
                 <ul>
                     <li class="item">
-                    <a href="${this.getAttribute("link1")}">
-                    ${this.getAttribute("nome1")}</a></li>
+                    <a href="${paginasPortfolio[0][0]}">
+                    ${paginasPortfolio[0][1]}</a></li>
                     <li class="item">
-                    <a href="${this.getAttribute("link2")}">
-                    ${this.getAttribute("nome2")}</a></li>
+                    <a href="${paginasPortfolio[1][0]}">
+                    ${paginasPortfolio[1][1]}</a></li>
                     <li class="item">
-                    <a href="${this.getAttribute("link3")}">
-                    ${this.getAttribute("nome3")}</a></li>
+                    <a href="${paginasPortfolio[2][0]}">
+                    ${paginasPortfolio[2][1]}</a></li>
                     <li class="item">
-                    <a href="${this.getAttribute("link4")}">
-                    ${this.getAttribute("nome4")}</a></li>
+                    <a href="${paginasPortfolio[3][0]}">
+                    ${paginasPortfolio[3][1]}</a></li>
                 </ul>
             </div>
         </div>
