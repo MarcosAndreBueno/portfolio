@@ -13,7 +13,7 @@ class ShadowNavBar extends HTMLElement {
             firstPath = "/portfolio"
         }
 
-        this.shadowRoot.innerHTML = this.build(firstPath[0]);
+        this.shadowRoot.innerHTML = this.build(firstPath);
 
         //style
         const style = document.createElement("style");
