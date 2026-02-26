@@ -6,7 +6,7 @@ class Rodape extends HTMLElement {
         super();
         const shadow = this.attachShadow({ mode: "open" });
 
-        this.findFirstPath;
+        this.findFirstPath();
         
         //template
         this.shadowRoot.innerHTML = this.build();
