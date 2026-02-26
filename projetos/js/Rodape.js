@@ -1,9 +1,13 @@
 class Rodape extends HTMLElement {
+    
+    firstPath = '';
 
     constructor() {
         super();
         const shadow = this.attachShadow({ mode: "open" });
 
+        this.findFirstPath;
+        
         //template
         this.shadowRoot.innerHTML = this.build();
 
@@ -19,23 +23,24 @@ class Rodape extends HTMLElement {
         this.shadowRoot.appendChild(link);
     }
 
-    initPaginasPortfolio() {
-        const basePath = window.location.pathname; 
-        let firstPath = basePath.split("/").slice(1,2);
-
-        if (firstPath[0] == "projetos") { //dev
-            firstPath = "/projetos";
-        } else { //prod
-            firstPath = "/portfolio/projetos"
+    findFirstPath() {
+        const basePath = window.location.pathname;
+        const firstPath = basePath.split("/").slice(1, 2);
+        if (firstPath[0] == "portfolio") { 
+            this.firstPath = "/portfolio"; //prod
+        } else { 
+            this.firstPath = "" //dev
         }
-        
+    }
+
+    initPaginasPortfolio() {
         var paginasPortfolio = [
-            [firstPath + "/automatic-melody-harmonizer.html", "Automatic Melody Harmonizer"],
-            [firstPath + "/dsmeta.html", "DSMeta"],
-            [firstPath + "/ecommerce.html", "Ecommerce"],
-            [firstPath + "/financial.html", "Financial"],
-            [firstPath + "/java-game.html", "Java Game"],
-            [firstPath + "/springboot3.html", "Spring Boot 3"],
+            [this.firstPath + "/projetos/automatic-melody-harmonizer.html", "Automatic Melody Harmonizer"],
+            [this.firstPath + "/projetos/dsmeta.html", "DSMeta"],
+            [this.firstPath + "/projetos/ecommerce.html", "Ecommerce"],
+            [this.firstPath + "/projetos/financial.html", "Financial"],
+            [this.firstPath + "/projetos/java-game.html", "Java Game"],
+            [this.firstPath + "/projetos/springboot3.html", "Spring Boot 3"],
         ];
         const paginaAtiva = this.getAttribute("paginaAtiva");
 
@@ -73,8 +78,8 @@ class Rodape extends HTMLElement {
 
     build_logo() {
         return `
-        <a class="logo-rodape" href="../index.html">
-            <img src="../assets/imagens/logo.png" alt="Logo">
+        <a class="logo-rodape" href="${this.firstPath}/index.html">
+            <img src="${this.firstPath}/assets/imagens/logo.png" alt="Logo">
         </a>
         `
     }
@@ -148,9 +153,9 @@ class Rodape extends HTMLElement {
 
     styles() {
         return `
-            @import './css/projeto.css'; 
-            @import './css/responsive.css';
-            @import '../assets/css/icone.css';
+            @import '${this.firstPath}/projetos/css/projeto.css'; 
+            @import '${this.firstPath}/projetos/css/responsive.css';
+            @import '${this.firstPath}/assets/css/icone.css';
         `;
     }
 }
