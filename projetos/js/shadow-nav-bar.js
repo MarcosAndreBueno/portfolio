@@ -21,19 +21,19 @@ class ShadowNavBar extends HTMLElement {
         this.shadowRoot.appendChild(style)
     }
 
-    build(basePath) {
+    build(firstPath) {
         return `
         <header>
             <div class="nav-bar container flex">
                 <div class="inicio">
-                    <a class="logo" href="${basePath}#inicio">
-                        <img src="${basePath}./assets/imagens/logo.png" alt="Logo">
+                    <a class="logo" href="${firstPath}#inicio">
+                        <img src="${firstPath}/assets/imagens/logo.png" alt="Logo">
                     </a>
                 </div>
                 <nav class="nav-bar-itens">
-                    <a href="${basePath}#inicio" class="active">Início</a>
-                    <a href="${basePath}#sobre">Sobre</a>
-                    <a href="${basePath}#projetos">Projetos</a>
+                    <a href="${firstPath}#inicio" class="active">Início</a>
+                    <a href="${firstPath}#sobre">Sobre</a>
+                    <a href="${firstPath}#projetos">Projetos</a>
                     <div class="menu-contato">
                         <a class="menu-link" href="#contato">Contato</a>
                         <div class="dropdown-contato">
