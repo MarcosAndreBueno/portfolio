@@ -4,7 +4,16 @@ class ShadowNavBar extends HTMLElement {
         super();
         const shadow = this.attachShadow({ mode: "open" });
 
-        this.shadowRoot.innerHTML = this.build();
+        const basePath = window.location.pathname; 
+        let firstPath = basePath.split("/").slice(1,2);
+
+        if (firstPath[0] == "projetos") { //dev
+            firstPath = "/";
+        } else { //prod
+            firstPath = "/portfolio"
+        }
+
+        this.shadowRoot.innerHTML = this.build(firstPath[0]);
 
         //style
         const style = document.createElement("style");
@@ -12,19 +21,19 @@ class ShadowNavBar extends HTMLElement {
         this.shadowRoot.appendChild(style)
     }
 
-    build() {
+    build(basePath) {
         return `
         <header>
             <div class="nav-bar container flex">
                 <div class="inicio">
-                    <a class="logo" href="/#inicio">
-                        <img src="/assets/imagens/logo.png" alt="Logo">
+                    <a class="logo" href="${basePath}#inicio">
+                        <img src="${basePath}./assets/imagens/logo.png" alt="Logo">
                     </a>
                 </div>
                 <nav class="nav-bar-itens">
-                    <a href="/#inicio" class="active">Início</a>
-                    <a href="/#sobre">Sobre</a>
-                    <a href="/#projetos">Projetos</a>
+                    <a href="${basePath}#inicio" class="active">Início</a>
+                    <a href="${basePath}#sobre">Sobre</a>
+                    <a href="${basePath}#projetos">Projetos</a>
                     <div class="menu-contato">
                         <a class="menu-link" href="#contato">Contato</a>
                         <div class="dropdown-contato">

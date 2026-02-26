@@ -20,13 +20,22 @@ class Rodape extends HTMLElement {
     }
 
     initPaginasPortfolio() {
+        const basePath = window.location.pathname; 
+        let firstPath = basePath.split("/").slice(1,2);
+
+        if (firstPath[0] == "projetos") { //dev
+            firstPath = "/projetos";
+        } else { //prod
+            firstPath = "/portfolio/projetos"
+        }
+        
         var paginasPortfolio = [
-            ["./automatic-melody-harmonizer.html", "Automatic Melody Harmonizer"],
-            ["./dsmeta.html", "DSMeta"],
-            ["./ecommerce.html", "Ecommerce"],
-            ["./financial.html", "Financial"],
-            ["./java-game.html", "Java Game"],
-            ["./springboot3.html", "Spring Boot 3"],
+            [firstPath + "/automatic-melody-harmonizer.html", "Automatic Melody Harmonizer"],
+            [firstPath + "/dsmeta.html", "DSMeta"],
+            [firstPath + "/ecommerce.html", "Ecommerce"],
+            [firstPath + "/financial.html", "Financial"],
+            [firstPath + "/java-game.html", "Java Game"],
+            [firstPath + "/springboot3.html", "Spring Boot 3"],
         ];
         const paginaAtiva = this.getAttribute("paginaAtiva");
 
@@ -108,6 +117,11 @@ class Rodape extends HTMLElement {
                     <li class="item">
                         <a class="contato-whatsapp" href="https://web.whatsapp.com/send?phone=5514996586618">
                             (14) 99658-6618
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="contato-whatsapp" href="https://web.whatsapp.com/send?phone=5519982666483">
+                            (19) 98266-6483 (recado)
                         </a>
                     </li>
                 </ul>

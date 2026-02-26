@@ -308,6 +308,7 @@ span.palavra {
 .projeto-cartao {
     margin-top: max(1%, 10px);
     width: calc(30% - 20px);
+    height: calc(30% - 20px);
     position: relative;
     overflow: hidden;
 }
@@ -316,6 +317,9 @@ span.palavra {
     width: 100%;
     border-radius: 20px;
     cursor: pointer;
+    height: 25rem;
+    object-fit: cover; /*cortar imagem e manter proporção*/
+    border-radius: 8px;
 }
 
 .projeto-cartao a {
